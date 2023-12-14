@@ -16,17 +16,12 @@ import org.slf4j.LoggerFactory;
 import javax.servlet.Servlet;
 import java.io.IOException;
 
-/**
- * Servlet that writes some sample content into the response. It is mounted for
- * all resources of a specific Sling resource type. The
- * {@link SlingSafeMethodsServlet} shall be used for HTTP methods that are
-// * idempotent. For write operations use the {@link /SlingAllMethodsServlet}.
- */
+
 @Component(service = {Servlet.class})
 @SlingServletResourceTypes(
-        resourceTypes = {"/wknd/components/page"},
+        resourceTypes = {"wknd/components/page"},
         methods = HttpConstants.METHOD_GET,
-        selectors = {"availability"},
+        selectors = {"newavailability"},
         extensions = "json")
 @ServiceDescription("Samthosh Vegetables - Availability Servlet")
 public class AvailabilityServlet extends SlingSafeMethodsServlet {
