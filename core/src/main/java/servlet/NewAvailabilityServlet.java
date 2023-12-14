@@ -24,9 +24,9 @@ import java.io.IOException;
         selectors = {"newavailability"},
         extensions = "json")
 @ServiceDescription("Samthosh Vegetables - Availability Servlet")
-public class AvailabilityServlet extends SlingSafeMethodsServlet {
+public class NewAvailabilityServlet extends SlingSafeMethodsServlet {
 
-    transient Logger LOG = LoggerFactory.getLogger(AvailabilityServlet.class);
+    transient Logger LOG = LoggerFactory.getLogger(NewAvailabilityServlet.class);
 
     @Override
     protected void doGet(@NotNull final SlingHttpServletRequest req,
